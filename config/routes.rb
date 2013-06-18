@@ -1,4 +1,7 @@
 Ideator::Application.routes.draw do
+  resources :participants
+
+
   resources :students
 
 

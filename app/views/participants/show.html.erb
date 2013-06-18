@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @participant.email %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @participant.city %>
+</p>
+
+<p>
+  <b>Coding experience:</b>
+  <%= @participant.coding_experience %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @participant.gender %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @participant.age %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>

@@ -6,7 +6,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :city
       t.text :coding_experience
       t.string :gender
-      t.fixnum :age
+      t.integer :age
 
       t.timestamps
     end
