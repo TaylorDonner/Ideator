@@ -1,27 +1,20 @@
 <h1>Listing ideas</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @ideas.each do |idea| %>
-  <tr>
-    <td><%= idea.name %></td>
-    <td><%= idea.description %></td>
-    <td><%= image_tag(idea.picture_url) if idea.picture.present? %></td>
-    <td><%= link_to 'Show', idea %></td>
-    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-    <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<div>
+  <% @ideas.each do |idea| %>
+  <h2>Name</h2>
+    <p><%= idea.name %></p>
+  <h2>Description</h2>
+    <p> <%= idea.description %> </p>
+  <h2>Picture</h2>
+    <p><%= image_tag(idea.picture_url, :width => 200) if idea.picture.present? %></p>
+    <p><%= link_to 'Show', idea %>  <%= link_to 'Edit', edit_idea_path(idea) %>  <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>  </p>
+  
+  <% end %>
 
 <%= link_to 'New Idea', new_idea_path %>
+ </div>
+    
+ 
+
+
