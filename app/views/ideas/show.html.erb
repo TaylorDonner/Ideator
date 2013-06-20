@@ -12,7 +12,8 @@
 
 <p>
   <b>Picture:</b>
-  <%= image_tag(@ideas.picture_url, :width => 600) if @idea.picture.present? %>
+  <br/>
+  <%= image_tag(@idea.picture_url) if @idea.picture.present? %>
 </p>
 
 
